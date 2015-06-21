@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!--默认把类的名称映射为相同名字的表名，可使用table属性修改表名--> 
+	<class name="HibernateEx.Demo" table="new_hibernatetest">
+		<!-- 主键采用uuid生成 -->
+		<id name="id">
+			<generator class="uuid"/>
+		</id>
+		<!--默认把类的变量映射为相同名字的表字段，可使用column属性修改表字段--> 
+		<property name="title"/>
+	</class>
+</hibernate-mapping>
